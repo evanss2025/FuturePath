@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html" class="active">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+  </body>
+  <div class="business_container">
+
+    <div class="container">
+      <h1>Business</h1>
+      <img src="assets/images/business.png">
+      <p>Business offers a diverse range of career paths, including roles such as entrepreneurs, managers, marketers, finance professionals, consultants, and human resource specialists. As a business professional, you can create and grow your own ventures, lead teams, develop effective marketing strategies, manage finances, provide valuable consulting services, and foster a positive work environment. With a focus on driving growth and success, the field of business presents opportunities for innovation, leadership, and financial prosperity. It requires a combination of strategic thinking, problem-solving skills, effective communication, and adaptability. Pursuing a career in business allows you to shape organizations, contribute to economic growth, and make a meaningful impact in the world of commerce.
+        
+      </p>
+    </div>
+  </div>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+ </script>
+</html>

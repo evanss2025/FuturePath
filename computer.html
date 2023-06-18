@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html" class="active">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+    <div class="computer_container">
+
+      <div class="container">
+        <h1>Computer Science</h1>
+        <img src="assets/images/computerscience.png">
+        <p>Computer science offers a wide range of career paths, including software developer, data analyst, cybersecurity specialist, IT project manager, web developer, and systems analyst. In these roles, you can create innovative software, analyze data for insights, ensure the security of computer systems, lead technology projects, develop engaging websites, and bridge the gap between business needs and technology solutions. With promising growth prospects and competitive salaries, computer science empowers you to contribute to advancements in areas like artificial intelligence and cloud computing, combining your passion for technology with problem-solving skills to make a meaningful impact in the digital landscape.
+
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+ </script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html" class="active">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+    <section>
+      <div class="container">
+        <div class="topcontainer">
+          <img class="mainImage" src="assets/images/mainimage.png" height="900px">
+          <div class="toptext">
+            <h1>Our Mission</h1>
+            <p>FuturePath's mission is to make career exploration fun and 
+              stress-free for students. We believe that when students have
+               the opportunity to discover their passions, they can truly grow.
+                Our platform offers a deep dive into different careers, helping
+                 students explore their options and make informed decisions. 
+                 Additionally, our opportunities search system allows students 
+                 to find internships, part-time jobs, and volunteer positions 
+                 to gain practical experience. With our career identification 
+                 test, students can identify their strengths and interests, 
+                 providing direction in their career journey. At FuturePath, 
+                 we're committed to empowering students and guiding them towards 
+                 a fulfilling future.
+
+            </p>
+          </div>
+          <a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html">
+            <button class="getstarted__button" >Get Started</button>
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </body>
+
+  <script>
+     //Code for getting name value and displaying
+    var nameoutput = document.getElementById("name_output");
+
+    let storedValue = localStorage.getItem("name");
+    nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+  </script>
+
+</html>

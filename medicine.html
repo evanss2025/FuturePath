@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html" class="active">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+      <div class="medicine_container">
+
+        <div class="container">
+          <h1>Medicine</h1>
+          <img src="assets/images/doctor.png">
+          <p>Medicine offers diverse career opportunities, including roles such as doctors, nurses, surgeons, pharmacists, medical researchers, and healthcare administrators. As a medical professional, you can provide direct patient care, perform surgical procedures, dispense medications, conduct vital research, and manage healthcare facilities. With a focus on improving health and saving lives, medicine allows you to make a significant impact on individuals and communities. The field offers continuous advancements in medical technology, innovative treatments, and preventive care. Pursuing a career in medicine enables you to combine your passion for helping others with scientific knowledge, compassion, and critical thinking skills to contribute to the well-being of society.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+ </script>
+</html>

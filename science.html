@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html" class="active">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+    <div class="science_container">
+
+      <div class="container">
+        <h1>Science</h1>
+        <img src="assets/images/science.png">
+        <p>Science offers a broad spectrum of career opportunities, including roles such as scientists, researchers, educators, laboratory technicians, environmentalists, and science communicators. As a science professional, you can conduct experiments, make discoveries, analyze data, develop theories, and contribute to expanding our knowledge and understanding of the natural world. With a focus on exploration and curiosity, the field of science enables you to delve into various disciplines such as biology, chemistry, physics, environmental science, and more. It requires critical thinking, problem-solving skills, attention to detail, and a passion for discovery. Pursuing a career in science allows you to contribute to advancements in technology, medicine, sustainability, and other fields, making a profound impact on society and our understanding of the universe.
+          
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+ </script>
+</html>

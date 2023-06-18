@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html" class="active">Opportunities</a></li>
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="opportunities_container">
+      <div id="map"></div>
+      <h1>Find career opportunities near you!</h1>
+    </div>
+
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPW7vjw9w2S5T6-0EaIHAVjY52YQchXUo&callback=initMap">
+</script>
+  </body>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+   //Code for google maps api
+  function initMap() {
+    var options = {
+      center: {lat: 37.0902, lng: -95.7129 },
+      zoom: 5
+    }
+
+    map = new google.maps.Map(document.getElementById("map"), options)
+
+
+   function addMarker(property){
+    const marker = new google.maps.Marker({
+      position:property.location,
+      map:map,
+
+      });
+
+
+
+      if(property.content){
+        const detailWindow = new google.maps.InfoWindow({
+        content: property.content
+        });
+
+        marker.addListener("mouseover", () => {
+      detailWindow.open(map, marker);
+      })
+
+
+      }
+      
+
+    
+
+    }
+
+  
+   //san fran markers
+    addMarker({location:{lat: 37.780251, lng: -122.4660867},
+    content: "<a href='https://about.asianart.org/art-speak/'<h2>Art Speak Internship</h2></a>" });
+    addMarker({location:{lat: 37.431850, lng: -122.175812},
+    content: "<a href='https://simr.stanford.edu/'<h2>Stanford Institutes of Medicine Summer Research Program</h2></a>" });
+    addMarker({location:{lat: 37.763088, lng: -122.457817},
+    content: "<a href='https://summerstudents.ucsf.edu/'<h2>Summer Student Research Program</h2></a>" });
+    addMarker({location:{lat: 37.788792, lng: -122.429291},
+    content: "<a href='https://www.jcycworkhub.org/programs/youthworks'<h2>SF YouthWorks</h2></a>" });
+    addMarker({location:{lat: 37.7698246, lng: -122.4660867},
+    content: "<a href='https://www.calacademy.org/careers-in-science-cis-intern-program'<h2>Careers in Science (CiS) Intern Program</h2></a>" });
+    
+    //LA markers
+    addMarker({location:{lat: 34.0635065, lng: -118.2014595},
+    content: "<a href='https://www.youngresearchers.usc.edu/'<h2>YOUNG RESEARCHERS PROGRAM</h2></a>" });
+    addMarker({location:{lat: 34.031174, lng: -118.276991},
+    content: "<a href='https://www.theinternproject.org/tip-summer-internship-summer-2023.html'<h2>The Intern Project Summer 2023 Program</h2></a>" });
+    addMarker({location:{lat: 34.0159757, lng: -118.286287},
+    content: "<a href='https://californiasciencecenter.org/programs/community-teen-interns'<h2>COMMUNITY TEEN INTERNS</h2></a>" });
+    addMarker({location:{lat: 33.8736111, lng: -118.3009962},
+    content: "<a href='https://www.metro.net/about/careers/tcap/'<h2>Transportation Career Academy Program</h2></a>" });
+    addMarker({location:{lat: 34.2021099, lng: -118.6014694},
+    content: "<a href='https://cdikids.org/get-involved/volunteer/'<h2>Child Development Institute (CDI) Volunteers and Interns</h2></a>" });
+
+    //other places
+    addMarker({location:{lat: 37.7449795, lng: -122.2267565},
+    content: "<a href='https://careers.nsta.org/job/high-school-stem-intern-alameda-ca-a944cfac60b52e40b1bd94c9803c7babb?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic'<h2>High School STEM Intern</h2></a>" });
+    addMarker({location:{lat: 40.815545, lng: -73.956918},
+    content: "<a href='https://zuckermaninstitute.columbia.edu/brainyac'<h2>BRAINYAC</h2></a>" });
+    addMarker({location:{lat: 30.472897, lng: -86.526226},
+    content: "<a href='https://afrlscholars.usra.edu/'<h2>AFRL Scholars Program</h2></a>" });
+    addMarker({location:{lat: 34.240701, lng: -92.018711},
+    content: "<a href='https://hutton.fisheries.org/'<h2>Hutton Junior Fisheries Biology Program</h2></a>" });
+    addMarker({location:{lat: 38.211715, lng: -75.680365},
+    content: "<a href='https://wwwcp.umes.edu/geosciences/'The Geosciences Bridge Program</h2></a>" });
+    addMarker({location:{lat: 42.4470009, lng: -76.4674687},
+    content: "<a href='https://btiscience.org/education-outreach/high-school-research-internships/'<h2>High school summer research internships</h2></a>" });
+    addMarker({location:{lat: 39.1094037, lng: -84.5372344},
+    content: "<a href='https://www.cincymuseum.org/internship-opportunities/'<h2>Cincinnati Museum Center internships</h2></a>" });
+
+  }
+
+  
+
+
+   //making markers
+
+ </script>
+</html>

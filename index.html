@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <img src ="assets/images/BiggerLogo.png" height="420">
+        <h1>Before we begin...</h1>
+        <form class="form" action="main.html">
+          <div class="form__output-group">
+            <label for="Name"></label>
+            <input type="text" class="form__input" id="nameInput" name="name" required autofocus placeholder="What's your name?">
+          </div>
+          <button class="form__button" id="btn1" type="submit" href="main.html" onclick="setName()">Continue</button>
+      </div>
+    </section>
+    
+  </body>
+<script>
+  // Code for pushing the name input value to local storage
+  var nameoutput = document.getElementById("name_output");
+  function setName() {
+    let input = document.getElementById("nameInput").value;
+    localStorage.setItem('name', input);
+  }
+</script>
+ 
+</html>

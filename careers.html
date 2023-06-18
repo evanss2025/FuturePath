@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FuturePath</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/4x4.png">
+   
+  </head>
+  <body id="main">
+    <div class="header__container">
+      <header>
+        <ul>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/main.html">Home</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/careers.html" class="active">Careers</a></li>
+            <li><a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/opportunities.html">Opportunities</a></li>
+
+            <li><h1 id="name_output">test</h1></li>
+        </ul>
+      </header>
+    </div>
+    
+    <div class="grid_container">
+      <div class="grid_item">
+        <div class="computer_science">
+          <div class="card">
+            <a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/computer.html">
+              <img src="assets/images/computerscience.png" height="500px">
+            </a>
+            <div class="content">
+              <h2>Computer Science</h2>
+              <p>
+                Computer science offers an exciting and in-demand career path where you can innovate, solve complex problems, and shape the future of technology.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_item">
+        <div class="doctor">
+          <div class="card">
+            <a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/medicine.html">
+              <img src="assets/images/doctor.png" height="500px">
+            </a>
+            <div class="content">
+              <h2>Medicine</h2>
+              <p>
+                Medicine is a fulfilling career that involves providing healthcare, diagnosing and treating patients, and making a positive impact on people's lives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_item">
+        <div class="business">
+          <div class="card">
+            <a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/business.html">
+              <img src="assets/images/business.png" height="500px">
+            </a>
+            <div class="content">
+              <h2>Business</h2>
+              <p>
+                Business is a dynamic and versatile career path that involves managing organizations and driving their success in a competitive world.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_item">
+        <div class="science">
+          <div class="card">
+            <a href="file:///C:/Users/Sophia/OneDrive/Desktop/webDev/FuturePath/science.html">
+              <img src="assets/images/science.png" height="500px">
+            </a>
+            <div class="content">
+              <h2>Science</h2>
+              <p>
+
+                Science is a fulfilling career where you can explore, experiment, discover, and contribute to our understanding of the world.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+    </div>
+    
+  </body>
+  <script>
+    //Code for getting name value and displaying
+   var nameoutput = document.getElementById("name_output");
+
+   let storedValue = localStorage.getItem("name");
+   nameoutput.innerHTML = "Hey, " + storedValue + ", welcome to FuturePath";
+
+
+ </script>
+
+</html>
